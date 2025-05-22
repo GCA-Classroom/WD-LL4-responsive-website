@@ -1,0 +1,213 @@
+/*
+  Font and color palette for a beginner-friendly sustainability website.
+  Uses easy-to-read Google Fonts and a soft green/blue color scheme.
+*/
+
+/* Import Google Fonts: Nunito for headings, Open Sans for body */
+@import url('https://fonts.googleapis.com/css?family=Nunito:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap');
+
+:root {
+  /* Soft eco-friendly color palette */
+  --eco-green: #8fd19e;   /* Soft green */
+  --eco-blue: #8fd19e;    /* Soft blue */
+  --eco-dark: #355c4a;    /* Dark green for text */
+  --eco-bg: #f4fbf7;      /* Very light green background */
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif; /* Easy to read for body */
+  background: var(--eco-bg);
+  color: var(--eco-dark);
+  margin: 0;
+}
+
+.logo, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', Arial, sans-serif; /* Friendly font for headings and logo */
+}
+
+header {
+  background-color: var(--eco-blue); /* Use soft blue for header */
+  padding: 0;
+}
+
+/* Navbar layout: logo left, nav center, icons right */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--eco-blue);
+}
+
+/* Center nav links in navbar */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--eco-dark);
+  text-decoration: none;
+  font-size: 1em;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+nav ul li a:hover {
+  background: var(--eco-green);
+  color: white;
+}
+
+/* Icons section styles */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 1.2em;
+  cursor: pointer;
+  color: var(--eco-dark);
+}
+
+/* Hamburger menu button for mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: var(--eco-dark);
+}
+
+/* Intro section styles */
+.intro-section {
+  background: linear-gradient(120deg, var(--eco-green) 60%, var(--eco-blue) 100%); /* Soft green/blue background */
+  color: var(--eco-dark);
+  text-align: center;
+  padding: 48px 16px 36px 16px;
+  margin-bottom: 24px;
+  border-radius: 0 0 24px 24px; /* Soft rounded bottom corners */
+}
+
+.intro-section h1 {
+  font-size: 2.2em;
+  margin-bottom: 12px;
+  font-family: 'Nunito', Arial, sans-serif;
+}
+
+.intro-section p {
+  font-size: 1.1em;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+/* Destinations section styles */
+.destinations-section {
+  background: #fff;
+  padding: 32px 16px;
+  border-radius: 16px;
+  max-width: 1000px;
+  margin: 0 auto 32px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  text-align: center;
+}
+
+.destinations-section h2 {
+  font-family: 'Nunito', Arial, sans-serif;
+  color: var(--eco-dark);
+  margin-bottom: 20px;
+}
+
+.destinations-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.destination-card {
+  background: var(--eco-bg);
+  border: 2px solid var(--eco-green);
+  border-radius: 12px;
+  width: 250px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.destination-card:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.destination-image img {
+  width: 200px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #eee;
+}
+
+.destination-card h3 {
+  margin: 8px 0 6px 0;
+  font-family: 'Nunito', Arial, sans-serif;
+  color: var(--eco-dark);
+}
+
+.destination-card p {
+  font-size: 1em;
+  color: var(--eco-dark);
+}
+
+/* Responsive: Stack nav links and center logo on small screens */
+@media (max-width: 700px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--eco-blue);
+    position: absolute;
+    top: 56px; /* below navbar */
+    left: 0;
+    width: 100%;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  nav ul.open {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  nav {
+    justify-content: flex-end;
+  }
+}
+
+/* Responsive: Stack cards on small screens */
+@media (max-width: 800px) {
+  .destinations-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .destination-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
