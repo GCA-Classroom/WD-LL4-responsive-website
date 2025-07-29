@@ -1,0 +1,186 @@
+/* style.css - Styles for Eco-Friendly Destinations Site */
+
+/* Reset some default styles for consistency */
+body, h1, h2, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* Set a background image that reflects sustainable travel (lush green landscape with a path) */
+  background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+}
+
+/* Header and navigation styles */
+header {
+  background: #388e3c; /* Green color */
+  padding: 16px 0;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero section styles */
+.hero {
+  /* Add a semi-transparent background for better text readability */
+  background: rgba(165, 214, 167, 0.92); /* Soft green with opacity */
+  text-align: center;
+  padding: 48px 16px 40px 16px;
+  margin: 24px auto 0 auto;
+  max-width: 700px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(56, 142, 60, 0.15);
+  transition: background 0.3s, box-shadow 0.3s;
+  outline: none; /* Remove default outline, but add custom focus below */
+}
+
+/* Make hero section focusable for keyboard users */
+.hero:focus {
+  box-shadow: 0 0 0 4px #388e3c, 0 4px 24px rgba(56, 142, 60, 0.15);
+}
+
+/* Add a hover effect to the hero/banner section */
+.hero:hover {
+  background: rgba(129, 199, 132, 0.97); /* Slightly darker green on hover */
+  box-shadow: 0 8px 32px rgba(56, 142, 60, 0.22);
+}
+.hero h1 {
+  font-family: 'Luckiest Guy', cursive, Arial, sans-serif; /* Eye-catching font */
+  font-size: 2.2em;
+  margin-bottom: 16px;
+  color: #205522;
+  text-shadow:
+    2px 2px 0 #fff,
+    4px 4px 0 #388e3c,
+    0 2px 8px #e8f5e9;
+}
+.hero p {
+  font-size: 1.15em;
+  color: #205522;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #111; /* Change button text to black for better contrast */
+  background-color: #388e3c;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(56, 142, 60, 0.12);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  font-family: 'Luckiest Guy', cursive, Arial, sans-serif; /* Match button font for style */
+}
+.hero-btn:hover, .hero-btn:focus {
+  background-color: #205522;
+  box-shadow: 0 4px 16px rgba(56, 142, 60, 0.18);
+  transform: translateY(-2px) scale(1.04);
+  outline: 2px solid #fff;
+}
+.hero-message {
+  margin-top: 18px;
+  font-size: 1.08em;
+  color: #205522;
+}
+.hero-sub {
+  font-weight: bold;
+  font-size: 1.15em;
+  color: #205522;
+  margin: 18px auto 0 auto;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Destination cards section */
+.destinations {
+  display: flex;
+  flex-direction: column; /* Mobile-first: stack cards vertically */
+  align-items: center;
+  gap: 24px;
+  padding: 32px 8px;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 340px;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  position: relative; /* Needed for fact hover */
+  outline: none; /* Remove default outline, add custom below */
+}
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+.card h2 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+.card p {
+  font-size: 1em;
+  color: #555;
+}
+.card-fact {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, 0);
+  background: rgba(56, 142, 60, 0.95);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  box-shadow: 0 2px 12px rgba(56, 142, 60, 0.18);
+  z-index: 2;
+  min-width: 220px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.card:hover .card-fact,
+.card:focus .card-fact {
+  display: block;
+}
+
+.card:focus {
+  box-shadow: 0 0 0 3px #388e3c, 0 2px 8px rgba(56, 142, 60, 0.18);
+}
+
+/* Responsive design for screens 600px and wider */
+@media (min-width: 600px) {
+  .destinations {
+    flex-direction: row; /* Align cards horizontally */
+    justify-content: center;
+    gap: 32px;
+  }
+  .card {
+    max-width: 300px;
+  }
+}
