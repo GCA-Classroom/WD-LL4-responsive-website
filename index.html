@@ -6,10 +6,59 @@
   <meta name="viewport" content="width=device-width">
   <title>LiveLab 4 Demo</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Add Google Fonts for an eye-catching font -->
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  Hello world
+  <!-- Header with navigation links -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#destinations">Eco Destinations</a></li>
+        <li><a href="#about">Why Eco-Travel?</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero section focused on eco-friendly travel -->
+  <section class="hero" tabindex="0">
+    <h1>Travel Green, Travel Smart</h1>
+    <p class="hero-sub"><strong>Join us in exploring the world responsibly—discover destinations that protect nature, support local communities, and inspire a greener future for all.</strong></p>
+    <p class="hero-message">Ready to start your adventure?</p>
+    <button class="hero-btn" onclick="window.location.href='#destinations'">Plan Your Trip</button>
+  </section>
+
+  <!-- Destination cards section -->
+  <section id="destinations" class="destinations">
+    <!-- Card 1: Sweden -->
+    <div class="card" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+        alt="Swedish forest landscape">
+      <h2>Sweden</h2>
+      <p>Sweden is a global leader in sustainability, with vast forests, clean cities, and a strong commitment to renewable energy.</p>
+      <span class="card-fact">Sweden aims to be carbon neutral by 2045 and recycles nearly 99% of its waste!</span>
+    </div>
+    <!-- Card 2: Bhutan -->
+    <div class="card" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+        alt="Bhutan mountain landscape">
+      <h2>Bhutan</h2>
+      <p>Bhutan is the world’s only carbon-negative country, prioritizing Gross National Happiness and environmental protection.</p>
+      <span class="card-fact">Bhutan absorbs more carbon than it emits and maintains over 70% forest cover!</span>
+    </div>
+    <!-- Card 3: Portugal -->
+    <div class="card" tabindex="0">
+      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80"
+        alt="Portugal coastline">
+      <h2>Portugal</h2>
+      <p>Portugal is known for its clean energy initiatives, beautiful coastlines, and eco-friendly tourism options.</p>
+      <span class="card-fact">Portugal generated over 60% of its electricity from renewables in 2023!</span>
+    </div>
+  </section>
+
   <script src="script.js"></script>
 </body>
 
